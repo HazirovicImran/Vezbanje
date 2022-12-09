@@ -33,3 +33,25 @@ const vahid = new User(`Vahid`, `Gasanin`, 2);
 vahid.incrementscore();
 vahid.incrementscore();
 console.log(vahid);
+
+// Napraviti constructor function za objekte koji imaju:
+// marka, boja, godinaProizvodnje, udaran.
+// Nakon toga napraviti prototype funkciju za svr objekte napravljene preko tog
+// konstruktora, koja pretvara udaran iz false u true
+
+function Automobil(marka, boja, godinaProizvodnje, udaran) {
+    this.marka = marka;
+    this.boja = boja;
+    this.godinaProizvodnje = godinaProizvodnje;
+    this.udaran = udaran;
+}
+
+Automobil.prototype.jeUdaran = function () {
+    this.udaran = false;
+}
+
+const mojAuto = new Automobil(`Audi`, `crna`, `2021`, true)
+
+mojAuto.jeUdaran();
+
+console.log(mojAuto);
