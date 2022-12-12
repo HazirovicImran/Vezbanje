@@ -41,5 +41,5 @@ function createUser(firstName, lastName) {
 }
 
 const ahmed = createUser("Ahmed", "Krkmisevic");
-console.log(ahmed);
+// console.log(ahmed);
 // console.log(ahmed.fullName());
