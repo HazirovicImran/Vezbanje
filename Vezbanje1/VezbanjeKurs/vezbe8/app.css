@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.left-side {
+	background-color: darkblue;
+	width: 20%;
+	height: 100%;
+	display: flex;
+	margin: 0;
+	float: left;
+	padding: 15px;
+}
+
+.right-side {
+	background-color: blue;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	margin: 0;
+	float: right;
+	padding: 20px;
+}
