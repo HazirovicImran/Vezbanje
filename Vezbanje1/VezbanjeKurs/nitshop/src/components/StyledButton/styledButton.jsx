@@ -1,5 +1,5 @@
 import React from "react";
-import "./styledButton.css";
+import "./StyledButton.css";
 
 const StyledButton = (props) => {
 	return (

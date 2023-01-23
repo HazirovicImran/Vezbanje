@@ -1,34 +1,23 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
-import StyledButton from "./components/StyledButton/styledButton";
-import StyledHeader from "./components/StyledHeader/styledHeader";
+import CustomForm from "./components/CustomForm/CustomForm";
+import CustomDiv from "./components/CustomDiv/CustomDiv";
 
 const App = () => {
-	const [innerText, setInnerText] = useState("");
-	const [clicked, setClicked] = useState(false);
+	const [fullName, setFullName] = useState("");
 
-	useEffect(() => {
-		clicked ? setInnerText("Clicked") : setInnerText("Click me!");
-	}, [clicked]);
-
-	function buttonClick() {
-		setClicked(!clicked);
+	function dataGrabber(name, lastName) {
+		let fullName = name + " " + lastName;
+		console.log(fullName);
+		setFullName(fullName);
 	}
-
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<StyledButton innerText={innerText} onClickHandler={buttonClick} />
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
+				<CustomDiv>
+					<h4>{fullName}</h4>
+				</CustomDiv>
+				<CustomForm sendData={(name, lname) => dataGrabber(name, lname)} />
 			</header>
 		</div>
 	);
